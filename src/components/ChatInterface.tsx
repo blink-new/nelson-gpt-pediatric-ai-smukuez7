@@ -3,7 +3,7 @@ import { Send, Menu, Plus, Settings, Book, Calculator, TrendingUp, MessageSquare
 import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { ScrollArea } from './ui/scroll-area'
-import { Sheet, SheetContent, SheetTrigger } from './ui/sheet'
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from './ui/sheet'
 import { Separator } from './ui/separator'
 import Message from './Message'
 import { useIsMobile } from '../hooks/use-mobile'
@@ -196,6 +196,9 @@ Please provide a comprehensive, medically accurate response focused on pediatric
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="left" className="w-64 p-0">
+                  <SheetHeader className="sr-only">
+                    <SheetTitle>Navigation Menu</SheetTitle>
+                  </SheetHeader>
                   {sidebarContent}
                 </SheetContent>
               </Sheet>
